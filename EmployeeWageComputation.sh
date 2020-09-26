@@ -7,7 +7,7 @@ IS_EMPLOYEE_PRESENT=1;
 IS_EMPLOYEE_ABSENT=0;
 IS_EMPLOYEE_FULLTIME=1;
 IS_EMPLOYEE_PARTTIME=0;
-WORKING_DAYS_PER_MONTH=20;
+WORKING_DAYS_In_MONTH=20;
 #Variable
 JobType=0;
 Salary_Of_Employee=0;
@@ -27,14 +27,14 @@ case $Random_No_Check in
 			Full_Day_Hour=8;
 			#calculate total salary of employee
 			Day_Salary_Of_Employee=$(( $Wage_Per_Hour * $Full_Day_Hour ))
-			Month_Salary_Of_Employee=$(($Day_Salary_Of_Employee * $WORKING_DAYS_PER_MONTH ))
+			Month_Salary_Of_Employee=$(($Day_Salary_Of_Employee * $WORKING_DAYS_In_MONTH ))
 		    else
 			echo "This is Part Time Employee"
 			Wage_Per_Hour=20;
 			Half_Day_Hour=4;
 			#Wage calculation for part time employee
 			HalfDay_Salary_Of_Employee=$(( $Wage_Per_Hour * $Half_Day_Hour ))
-			Month_Salary_Of_Employee=$(( $HalfDay_Salary_Of_Employee * $WORKING_DAYS_PER_MONTH))
+			Month_Salary_Of_Employee=$(( $HalfDay_Salary_Of_Employee * $WORKING_DAYS_In_MONTH))
 		    fi
 		;;
 
